@@ -4,7 +4,7 @@
 - ``` rails db:create db:migrate ```
 - ``` rails server ``` 
 
-## Utilsiation de l'API avec Postman
+## Utilisation de l'API avec Postman
 
 - L'endpoint pour créer un utilisateur est celui-ci : ``` http://localhost:3000/users ``` en requête POST.
 - Dans l'onglet "Body", séléctionnez "raw"
