@@ -16,4 +16,9 @@ class UserController < ApplicationController
       render json: "Ce pseudo est déjà prit ou ne respecte pas les règles (3 caractères max, tout en majuscule, pas de chiffre). Nous vous proposons celui-ci : #{new_pseudo}", status: :created
     end
   end
+
+  private
+    def user_params
+      params.require(:user).permit(:name)
+    end
 end
