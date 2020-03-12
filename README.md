@@ -1,6 +1,7 @@
 ## Import du projet et lancement 
  
 - ``` git clone https://github.com/musait/tech_test.git ```
+- ``` bundle install ```
 - ``` rails db:create db:migrate ```
 - ``` rails server ``` 
 
