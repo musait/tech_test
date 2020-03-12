@@ -6,10 +6,10 @@
 
 ## Utilisation de l'API avec Postman
 
-- L'endpoint pour créer un utilisateur est celui-ci : ``` http://localhost:3000/users ``` en requête POST.
-- Dans l'onglet "Body", séléctionnez "raw"
-- Dans le champs en dessous, vous pouvez entrer ceci : ``` { "user": {"name":"AAA"}} ``` en remplacant "AAA" par la composition de lettres et/ou de chiffres de votre choix.
-- Si le pseudo que vous avez choisi convient, vous obtiendrez un statut "201 created" avec un message "OK" ,sinon, le programme vous renverra un autre choix qui sera créer aléatoirement. 
+- L'endpoint pour créer un utilisateur est celui-ci : ``` http://localhost:3000/users ``` en requête POST;
+- Dans l'onglet "Body", séléctionnez "raw";
+- Dans le champs en dessous, vous pouvez entrer ceci : ``` { "user": {"name":"AAA"}} ``` en remplacant "AAA" par la composition de lettres et/ou de chiffres de votre choix;
+- Si le pseudo que vous avez choisi convient, vous obtiendrez un statut "201 created" avec un message "OK" ,sinon, le programme vous renverra un autre choix qui sera créé aléatoirement;
 
 
 ## Test
