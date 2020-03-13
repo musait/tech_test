@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+new_pseudo = ""
+20000.times do
+  new_pseudo = Array.new(3){[*"A".."Z"].sample}.join
+  User.create(name:new_pseudo) unless User.exists?(name: new_pseudo)
+end
