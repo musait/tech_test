@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+  class UsersController < ApplicationController
   def new
   end
 
@@ -7,13 +7,8 @@ class UsersController < ApplicationController
     if @user.save
       render json: "OK", status: :created
     else
-      new_pseudo = ""
-      loop do
-        new_pseudo = Array.new(3){[*"A".."Z"].sample}.join
-        break unless User.exists?(name: new_pseudo)
-      end
-      User.create(name:new_pseudo)
-      render json: "Ce pseudo est déjà prit ou ne respecte pas les règles (3 caractères max, tout en majuscule, pas de chiffre). Nous vous proposons celui-ci : #{new_pseudo}", status: :created
+      @new_pseudo = UserCreation.new.create_user
+      render json: "Ce pseudo est déjà prit ou ne respecte pas les règles (3 caractères max, tout en majuscule, pas de chiffre). Nous vous proposons celui-ci : #{@new_pseudo}", status: :created
     end
   end
 
